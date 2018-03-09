@@ -24,12 +24,20 @@ export class TaskListService {
     return obs;
   }
 
-  getTask(id:number){
-    return this.TASKS.find(task => task.id === id);
+  getTask(id: number): Observable<ITask> {
+
+    let obs = new Observable<ITask>(observer => {
+      setTimeout(() => {
+        observer.next(this.TASKS.find(task => task.id === id));
+        observer.complete();
+      }, 500);
+    });
+    return obs;
   }
 
 
-private TASKS:ITask[] = [
+
+  private TASKS:ITask[] = [
       {
         id: 1,
         title: 'Zjeść obiad from service',
@@ -47,6 +55,6 @@ private TASKS:ITask[] = [
         status: 'not started'
       }
 
-]
+  ]
 
 }

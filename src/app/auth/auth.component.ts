@@ -14,11 +14,11 @@ export class AuthComponent implements OnInit {
   }
 
   login(formValues) { 
-    this.router.navigate(['todos']);
+    this.router.navigate(['tasks']);
   }
     
   cancel() {
-    this.router.navigate(['todos']);
+    this.router.navigate(['tasks']);
   }
 
 }

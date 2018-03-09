@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { appRoutes } from './routes/routes';
-import { TaskListComponent } from './tasks/task-list.component';
+import { TaskListComponent } from './task-list/task-list.component';
 import { TaskListService } from './services/task-list.service';
-import { TaskComponent } from './tasks/task/task.component';
+import { TaskEditComponent } from './task-edit/task-edit.component';
+import { TaskThumbnailComponent } from './task-list/task-thumbnail/task-thumbnail.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TaskComponent } from './tasks/task/task.component';
     AuthComponent,
     NavbarComponent,
     TaskListComponent,
-    TaskComponent
+    TaskThumbnailComponent,
+    TaskEditComponent
   ],
   imports: [
     BrowserModule,

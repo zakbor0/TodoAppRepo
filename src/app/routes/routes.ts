@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 import { AuthComponent } from '../auth/auth.component';
-import { TodosComponent } from '../todos/todos.component';
+import { TaskListComponent } from '../tasks/task-list.component';
 
 
 
 export const appRoutes: Routes = [
   { path: 'auth', component: AuthComponent },
-  { path: 'todos', component: TodosComponent},
-  { path: '', redirectTo: '/todos', pathMatch: 'full' },
+  { path: 'tasks', component: TaskListComponent},
+  { path: '', redirectTo: '/tasks', pathMatch: 'full' },
 
   // { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
   // { path: 'events', component: EventsListComponent, resolve: {events: EventListResolver}},

@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { appRoutes } from './routes/routes';
-import { TodosComponent } from './todos/todos.component';
+import { TaskListComponent } from './tasks/task-list.component';
+import { TaskListService } from './services/task-list.service';
+import { TaskComponent } from './tasks/task/task.component';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { TodosComponent } from './todos/todos.component';
     AppComponent,
     AuthComponent,
     NavbarComponent,
-    TodosComponent
+    TaskListComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,9 @@ import { TodosComponent } from './todos/todos.component';
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    TaskListService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
